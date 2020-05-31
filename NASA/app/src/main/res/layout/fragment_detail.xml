@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Cases"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/totalCases"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/totalCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:hint="1234"
+                android:textColor="#ffff"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Deaths"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+            <TextView
+                android:id="@+id/totalDeaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:hint="1234"
+                android:textColor="#ffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/totalRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="123"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/recoveryRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="recovey"
+            android:maxLength="22"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalRecovered" />
+
+        <TextView
+            android:id="@+id/deathRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="death"
+            android:maxLength="22"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/totalRecovered" />
+
+        <TextView
+            android:id="@+id/probRecover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="recover detail unavailable"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recoveryRate" />
+
+        <TextView
+            android:id="@+id/probDeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="death detail unavailable"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/probRecover" />
+
+        <TextView
+            android:id="@+id/ncs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="New Confirmed Cases"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/probDeath" />
+
+        <TextView
+            android:id="@+id/nrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="New Recovered Cases"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/ncs"
+            app:layout_constraintTop_toBottomOf="@+id/ncs" />
+
+        <TextView
+            android:id="@+id/nds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="New Death Cases"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/nrs"
+            app:layout_constraintTop_toBottomOf="@+id/nrs" />
+
+        <TextView
+            android:id="@+id/tcs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Total Confirmed Cases"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/nds"
+            app:layout_constraintTop_toBottomOf="@+id/nds" />
+
+        <TextView
+            android:id="@+id/trs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Total Recovered Cases"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/tcs"
+            app:layout_constraintTop_toBottomOf="@+id/tcs" />
+
+        <TextView
+            android:id="@+id/tds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Total Confirmed Cases"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/trs"
+            app:layout_constraintTop_toBottomOf="@+id/trs" />
+
+        <TextView
+            android:id="@+id/tempareture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tempareture"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/tds"
+            app:layout_constraintTop_toBottomOf="@+id/tds" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Humidity"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/tempareture"
+            app:layout_constraintTop_toBottomOf="@+id/tempareture" />
+
+        <TextView
+            android:id="@+id/air_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Air Quality"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/humidity"
+            app:layout_constraintTop_toBottomOf="@+id/humidity" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

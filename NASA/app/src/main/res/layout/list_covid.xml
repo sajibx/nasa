@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/list_background"
+    android:layout_marginTop="5dp"
+    android:id="@+id/list"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="240dp">
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="country"
+        android:textSize="25dp"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/newConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="newConfirm"
+        android:textColor="#ffff"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country" />
+
+    <TextView
+        android:id="@+id/newRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="newRecovered"
+        android:textColor="#ffff"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/newConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/newConfirm" />
+
+    <TextView
+        android:id="@+id/newDeath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="newDeath"
+        android:textColor="#ffff"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/newRecovered"
+        app:layout_constraintTop_toBottomOf="@+id/newRecovered" />
+
+    <TextView
+        android:id="@+id/totalConfirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="totalConfirmed"
+        android:textColor="#ffff"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/newDeath"
+        app:layout_constraintTop_toBottomOf="@+id/newDeath" />
+
+    <TextView
+        android:id="@+id/totalRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="totalConfirmed"
+        android:textColor="#ffff"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/totalConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/totalConfirmed" />
+
+    <TextView
+        android:id="@+id/totalDeath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="totalConfirmed"
+        android:textColor="#ffff"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/totalRecovered"
+        app:layout_constraintTop_toBottomOf="@+id/totalRecovered" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="totalConfirmed"
+        android:textColor="#ffff"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/totalDeath"
+        app:layout_constraintTop_toBottomOf="@+id/totalDeath" />
+</androidx.constraintlayout.widget.ConstraintLayout>
